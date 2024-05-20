@@ -5,7 +5,17 @@
  * @returns {number} the new length of the array.
  */
 
-function myPushFunction(array, element) {}
+function myPushFunction(array, element) {
+
+  let newLength = array.length;
+
+  for (let i = 0; i <= newLength; i++) {
+    if (i === newLength) {
+      array[i] = element
+    }
+  }
+  return array.length;
+}
 
 /**
  * Removes the last element of the array and returns the removed element, or undefined if the array is empty. Do not use the pop method.
