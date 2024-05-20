@@ -8,7 +8,7 @@
 function myPushFunction(array, element) {
 
   let newLength = array.length;
-
+// this loop is an equivalent of the push method.
   for (let i = 0; i <= newLength; i++) {
     if (i === newLength) {
       array[i] = element
@@ -22,7 +22,23 @@ function myPushFunction(array, element) {
  * @param {Array[*]} array - an array of any kind of elements.
  * @returns {*} - the removed element
  */
-function myPopFunction(array) {}
+function myPopFunction(array) {
+
+  lastElement = array[array.length - 1];
+
+  let removesLastElemnt = []
+  for (let i = 0; i < array.length - 1; i++){
+    removesLastElemnt[i] = array[i]
+  }
+
+   for (let i = 0; i < removesLastElemnt.length; i++) {
+     array[i] = removesLastElemnt[i];
+   }
+  
+  array.length = removesLastElemnt.length
+
+return lastElement;
+}
 
 /**
  * Determines whether an array includes a specific value within its entries. Do not use the includes method.
@@ -31,7 +47,9 @@ function myPopFunction(array) {}
  * @param {number} [startIdx] - an optional index from which to start searching.
  * @returns {boolean} returns true if the searchElement is found in the array and false if it is not.
  */
-function myIncludesFunction(array, searchElement, startIdx) {}
+function myIncludesFunction(array, searchElement, startIdx) {
+  
+}
 
 /**
  * Returns the first index in an array where a specified value is found. Do not use the indexOf method.
