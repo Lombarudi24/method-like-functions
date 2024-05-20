@@ -48,7 +48,7 @@ return lastElement;
  * @returns {boolean} returns true if the searchElement is found in the array and false if it is not.
  */
 function myIncludesFunction(array, searchElement, startIdx) {
-  
+
 }
 
 /**
@@ -97,7 +97,21 @@ function myUnshiftFunction(array, newElement) {}
  * @param {Array[*]} array - an array of any kind of elements.
  * @returns {*} - the removed element
  */
-function myShiftFunction(array) {}
+function myShiftFunction(array) {
+
+  if (array.length === 0) return undefined;
+
+  let fiirstElement = array[0];
+
+  for (let i = 1; i < array.length; i++){
+    array[i - 1] = array[i]
+  }
+
+  array.length = array.length - 1
+  
+  return fiirstElement
+
+}
 
 module.exports = {
   myPushFunction,
